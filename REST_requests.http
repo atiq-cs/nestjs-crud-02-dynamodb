@@ -1,9 +1,9 @@
 ### Retrieve All Media Items
-GET http://localhost:3000/media HTTP/1.1
+GET http://localhost:3000/media HTTP/2
 Content-Type: application/json;charset=utf-8
 
-### Insert An Entry
-POST http://localhost:3000/media HTTP/1.1
+### Insert An Entry (Movie)
+POST http://localhost:3000/media HTTP/2
 Content-Type: application/json;charset=utf-8
 
 {
@@ -12,8 +12,8 @@ Content-Type: application/json;charset=utf-8
   "synopsis": "In 1913, brilliant East Indian mathematician Srinivasa Ramanujan (Dev Patel) travels to Trinity College in England to work with professor G.H. Hardy (Jeremy Irons)."
 }
 
-### Insert Another Entry
-POST http://localhost:3000/media HTTP/1.1
+### Insert Another Entry (Movie)
+POST http://localhost:3000/media HTTP/2
 Content-Type: application/json;charset=utf-8
 
 {
@@ -22,16 +22,26 @@ Content-Type: application/json;charset=utf-8
   "synopsis": "Frank (Leonardo DiCaprio) and April Wheeler (Kate Winslet) always see themselves as far-removed from the conventionality of suburbia."
 }
 
+### Insert Another Entry (TV Show)
+POST http://localhost:3000/media HTTP/2
+Content-Type: application/json;charset=utf-8
+
+{
+  "title": "Cosmos: Possible Worlds",
+  "year": 2020,
+  "synopsis": "Following the wildly successful \"Cosmos: A Spacetime Odyssey,\" Neil deGrasse Tyson returns as host to translate more revelations of science into a lavish transporting experience, taking audiences on a series of spiritual voyages of exploration."
+}
+
 ### Retrieve Single Media Item
-GET http://localhost:3000/media/the-man-who-knew-infinity/2015 HTTP/1.1
+GET http://localhost:3000/media/the-man-who-knew-infinity/2015 HTTP/2
 Content-Type: application/json;charset=utf-8
 
 ### Retrieve Single Media Item example 2
-GET http://localhost:3000/media/revolutionary-road/2008 HTTP/1.1
+GET http://localhost:3000/media/revolutionary-road/2008 HTTP/2
 Content-Type: application/json;charset=utf-8
 
 ### Update a media item
-PUT http://localhost:3000/media/revolutionary-road/2008 HTTP/1.1
+PUT http://localhost:3000/media/revolutionary-road/2008 HTTP/2
 Content-Type: application/json;charset=utf-8
 
 {
@@ -40,5 +50,9 @@ Content-Type: application/json;charset=utf-8
 }
 
 ### Delete example
-DELETE http://localhost:3000/media/revolutionary-road/2008 HTTP/1.1
+DELETE http://localhost:3000/media/revolutionary-road/2008 HTTP/2
+Content-Type: application/json;charset=utf-8
+
+### Retrieve All Media Items
+GET http://localhost:3000/media HTTP/2
 Content-Type: application/json;charset=utf-8

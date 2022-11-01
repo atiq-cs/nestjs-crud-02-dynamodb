@@ -1,3 +1,4 @@
+// DB Model
 import { CreateTableCommand, CreateTableInput } from "@aws-sdk/client-dynamodb";
 import { ddbClient, DEFAULT_MEDIA_TABLE } from "../libs/ddbClient";
 

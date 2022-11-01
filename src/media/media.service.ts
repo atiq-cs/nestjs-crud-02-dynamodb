@@ -13,13 +13,13 @@ export class MediaService
     // TODO: if another media exists with same title and year, append a sequence number
     // 'replaceAll' requires 'es2021' or later
     // For now, if return an error if key already exists
-    return title.toLowerCase().replaceAll(' ', '-');
+    return title.toLowerCase().replaceAll(' ', '-').replace(/[^a-z0-9,.-]/gi, '');
   }
 
   async insertMediaItem(title: string, year: number, synopsis: string) {
     const slug = this.generateSlug(title, year);
     const item = new Media(slug, year, title, synopsis);
-    // AWS DynamoDB will throw exception if key already exists
+    // AWS DynamoDB will throw exception in Promise if key already exists
     return await putMedia(item);
   }
 

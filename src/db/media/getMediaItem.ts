@@ -11,7 +11,7 @@ export const getMediaItem = async (slug: string, year: number) => {
     },
   };
 
-  console.log("Inserting " + slug + "-" + year + "...");
+  console.log("Inserting " + slug + "-" + year + "..");
   
   try {
     const data = await ddbClient.send(new GetItemCommand(params));

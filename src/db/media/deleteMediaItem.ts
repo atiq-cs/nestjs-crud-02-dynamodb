@@ -11,7 +11,7 @@ export const deleteMediaItem = async (slug: string, year: number) => {
     },
   };
 
-  console.log("Deleting " + slug + "-" + year + "...");
+  console.log("Deleting " + slug + "-" + year + "..");
 
   try {
     const data = await ddbClient.send(new DeleteItemCommand(params));

@@ -36,7 +36,7 @@ export const updateMediaItem = async (media: Media) => {
     ReturnValues: "ALL_NEW"
   };
 
-  console.log("Updating " + media.slug + "-" + media.year + "...");
+  console.log("Updating " + media.slug + "-" + media.year + "..");
 
   try {
     const data = await ddbClient.send(new UpdateItemCommand(params));

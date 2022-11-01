@@ -14,7 +14,7 @@ export const putMedia = async (media: Media) => {
     },
   };
 
-  console.log("Inserting " + media.slug + "-" + media.year + "...");
+  console.log("Inserting " + media.slug + "-" + media.year + "..");
 
   try {
     const data = await ddbClient.send(new PutItemCommand(params));
